@@ -1,0 +1,21 @@
+# Equivalente Python do pom.xml do projeto original em Java/Maven.
+
+[project]
+name = "pipes-and-filters-example"
+version = "1.0.0"
+description = "Exemplo didatico da arquitetura Pipes and Filters em Python"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+pipes-filters = "pipes_filters.main:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pipes_filters*"]
